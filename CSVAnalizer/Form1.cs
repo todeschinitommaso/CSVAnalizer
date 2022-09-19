@@ -50,5 +50,12 @@ namespace CSVAnalizer
             sr.Close();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            StreamReader sr = new StreamReader(path);
+            int a = sr.ReadLine().Length;
+            sr.Close();
+            MessageBox.Show("Dimensione massima " + a.ToString());
+        }
     }
 }
